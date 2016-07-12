@@ -1,8 +1,17 @@
 {
   "name": "vue-drawer",
-  "version": "0.0.3",
   "description": "A drawer for vue",
-  "main": "src/drawer.vue",
+  "version": "0.0.3",
+  "author": "k2wanko <k2.wanko@gmail.com>",
+  "browserify": {
+    "transform": [
+      "vueify",
+      "babelify"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/k2wanko/vue-drawer/issues"
+  },
   "dependencies": {
     "vue": "^1.0.26",
     "vue-touch": "^1.1.0"
@@ -19,33 +28,27 @@
     "vueify": "^8.7.0",
     "watchify": "^3.7.0"
   },
-  "browserify": {
-    "transform": [
-      "vueify",
-      "babelify"
-    ]
-  },
-  "scripts": {
-    "watchify": "watchify -vd -p browserify-hmr -e demo/main.js -o demo/build.js",
-    "dev": "webpack-dev-server --inline --hot",
-    "serve": "http-server -c 1 -a 0.0.0.0 demo",
-    "build": "browserify demo/main.js > demo/build.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "files": [
+    "src/drawer.vue"
+  ],
+  "homepage": "https://github.com/k2wanko/vue-drawer#readme",
+  "keywords": [
+    "drawer",
+    "layout",
+    "responsive",
+    "vue"
+  ],
+  "license": "MIT",
+  "main": "src/drawer.vue",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/k2wanko/vue-drawer.git"
   },
-  "keywords": [
-    "vue",
-    "drawer",
-    "responsive",
-    "layout"
-  ],
-  "author": "k2wanko <k2.wanko@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/k2wanko/vue-drawer/issues"
-  },
-  "homepage": "https://github.com/k2wanko/vue-drawer#readme"
+  "scripts": {
+    "build": "browserify demo/main.js > demo/build.js",
+    "dev": "webpack-dev-server --inline --hot",
+    "serve": "http-server -c 1 -a 0.0.0.0 demo",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watchify": "watchify -vd -p browserify-hmr -e demo/main.js -o demo/build.js"
+  }
 }
