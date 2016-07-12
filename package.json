@@ -34,7 +34,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/k2wanko/vue-drawer-panel.git"
+    "url": "git+https://github.com/k2wanko/vue-drawer.git"
   },
   "keywords": [
     "vue",
@@ -45,7 +45,7 @@
   "author": "k2wanko <k2.wanko@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/k2wanko/vue-drawer-panel/issues"
+    "url": "https://github.com/k2wanko/vue-drawer/issues"
   },
-  "homepage": "https://github.com/k2wanko/vue-drawer-panel#readme"
+  "homepage": "https://github.com/k2wanko/vue-drawer#readme"
 }
