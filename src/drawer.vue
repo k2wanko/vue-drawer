@@ -4,7 +4,7 @@
       <slot></slot>
       <div class="scrim" v-bind:class="show ? 'scrim-enter' : ''" v-touch:tap="scrimTouch"></div>
     </div>
-    <div class="drawer" v-bind:class="show ? 'drawer-enter' : ''" v-bind:style="{width: drawerWidth}">
+    <div class="drawer" v-bind:class="[right ? 'drawer-right' : 'drawer-left', show ? 'drawer-enter' : '']" v-bind:style="{width: drawerWidth}">
       <slot name="drawer"></slot>
     </div>
   </div>
@@ -21,6 +21,9 @@
      show: {
        type: Boolean,
        twoWay: true
+     },
+     right: {
+       type: Boolean
      }
    },
    data() {
@@ -75,18 +78,29 @@
  .vue-drawer > .drawer {
    background-color: #fff;
    position: fixed;
-   left: 0;
    top: 0;
    width: 100%;
    height:100%;
    overflow: hidden;
    pointer-events: none;
-   transform: translateX(-102%);
-   transition: transform ease-in-out 0.38s;
+   visibility: hidden;
+   transition: transform ease-in-out 0.38s, visibility 0.38s;
    will-change: none;
  }
 
+ .vue-drawer > .drawer-left {
+   left: 0;
+   transform: translateX(-102%);
+ }
+
+ .vue-drawer > .drawer-right {
+   right: 0;
+   transform: translateX(102%);
+ }
+
+
  .vue-drawer > .drawer-enter {
+   visibility: visible;
    transform: translateX(0%);
  }
 </style>

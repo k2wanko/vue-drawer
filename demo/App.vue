@@ -1,5 +1,5 @@
 <template>
-  <drawer :show.sync="drawerShow">
+  <drawer :show.sync="drawerShow" :right="drawerRight">
     <div slot="drawer">
       <h2>Header</h2>
       <ul>
@@ -7,6 +7,7 @@
       </ul>
     </div>
     <center>
+      <button v-on:click="drawerFlip">flip</button><br>
       <button v-on:click="drawerToggle">toggle</button>
     </center>
   </drawer>
@@ -17,6 +18,7 @@
  export default {
    data(){
      return {
+       drawerRight: false,
        drawerShow: false,
        navItems: [
          'Item1',
@@ -28,6 +30,9 @@
      }
    },
    methods: {
+     drawerFlip() {
+       this.drawerRight = !this.drawerRight;
+     },
      drawerToggle() {
        this.drawerShow = !this.drawerShow;
     }
