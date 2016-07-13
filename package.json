@@ -1,7 +1,7 @@
 {
   "name": "vue-drawer",
   "description": "A drawer for vue",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "author": "k2wanko <k2.wanko@gmail.com>",
   "browserify": {
     "transform": [
