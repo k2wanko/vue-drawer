@@ -1,9 +1,9 @@
 <template>
   <drawer :show.sync="drawerShow" :right="drawerRight">
     <div slot="drawer">
-      <h2>Header</h2>
+      <h2><a href="#">Vue Drawer</a></h2>
       <ul>
-        <li v-for="item in navItems">{{item}}</li>
+        <li v-for="item in navItems"><a href="#{{item}}">{{item}}</a></li>
       </ul>
     </div>
     <center>

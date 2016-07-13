@@ -100,6 +100,7 @@
 
 
  .vue-drawer > .drawer-enter {
+   pointer-events: inherit;
    visibility: visible;
    transform: translateX(0%);
  }
